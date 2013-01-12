@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageView 
+        android:id="@+id/backDist"
+        android:layout_width="wrap_content"	
+    	android:layout_height="wrap_content"
+    	android:src="@drawable/overlaybackground"
+    	android:layout_centerHorizontal="true"
+    	android:layout_marginTop="10dp"
+    	android:contentDescription="@string/accept"/>
+    
+    <TextView 
+        android:id="@+id/textDistanceNumber"
+        android:layout_width="wrap_content"	
+    	android:layout_height="wrap_content"
+    	android:layout_centerHorizontal="true"
+    	android:text="@string/minute"
+    	android:layout_marginTop="20dp"
+    	style="@style/blackLetters"
+    	android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <ImageView
+        android:id="@+id/backDist2"
+        android:layout_width="220dp"
+        android:layout_height="90dp"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/accept"
+        android:src="@drawable/overlaybackground" />
+        <Button
+        android:id="@+id/finishDistanceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/sel_delete_button"
+        android:drawableStart="@drawable/delete"
+        android:gravity="left|center_vertical"
+        android:text="@string/finish"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="30dp" >
+
+    </Button>   
+
+</RelativeLayout>

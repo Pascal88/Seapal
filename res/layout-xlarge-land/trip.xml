@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView 
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/tripTitle"
+    	android:textSize="20sp"
+    	android:layout_marginLeft="20dp"/>
+    
+    <TextView 
+        android:id="@+id/skipper"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/skipper"
+    	android:textSize="20sp"
+    	android:layout_marginLeft="150dp"/>
+    
+    <TextView 
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/start"
+    	android:textSize="20sp"
+    	android:layout_marginLeft="250dp"/>
+    
+    <TextView 
+        android:id="@+id/from"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/From"
+    	android:textSize="20sp"
+    	android:layout_marginLeft="500dp"/>
+    
+    <TextView 
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/end"
+    	android:textSize="20sp"
+    	android:layout_marginLeft="600dp"/>
+    
+    <TextView 
+        android:id="@+id/to"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/to"
+    	android:textSize="20sp"
+    	android:layout_marginLeft="850dp"/>
+    
+    <TextView 
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/duration"
+    	android:textSize="20sp"
+    	android:layout_marginLeft="950dp"/>
+    
+    <TextView 
+        android:id="@+id/engine"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/engine"
+    	android:textSize="20sp"
+    	android:layout_marginLeft="1050dp"/>
+    
+    <CheckBox 
+        android:id="@+id/tankedCheck"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textSize="20sp"
+    	android:layout_marginLeft="1170dp"/>
+    
+</RelativeLayout>

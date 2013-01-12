@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/highlight_item" >
+    
+	<TextView
+        android:id="@+id/name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/logbookBoatname"
+        android:layout_gravity="fill_horizontal"
+        android:textSize="15sp"
+        android:paddingTop="4dp" >
+    </TextView>
+    
+	<TextView
+        android:id="@+id/type"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/logbookType"
+        android:layout_gravity="fill_horizontal"
+        android:textSize="15sp"
+         android:paddingTop="4dp" >
+    </TextView>
+    
+	<TextView
+        android:id="@+id/draftsman"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/draftsman"
+        android:layout_gravity="fill_horizontal"
+        android:textSize="15sp"
+         android:paddingTop="4dp" >
+    </TextView>
+    
+	<TextView
+        android:id="@+id/length"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/length"
+        android:layout_gravity="fill_horizontal"
+        android:textSize="15sp"
+         android:paddingTop="4dp" >
+    </TextView>
+    
+	<TextView
+        android:id="@+id/owner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/owner"
+        android:layout_gravity="fill_horizontal"
+        android:textSize="15sp"
+         android:paddingTop="4dp" >
+    </TextView>
+    
+	<ImageButton
+            android:id="@+id/show"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@null"
+            android:contentDescription="@string/menuButton"
+            android:scaleType="fitXY"
+            android:src="@drawable/arrowbutton" />
+	
+</LinearLayout>

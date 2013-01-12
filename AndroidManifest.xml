@@ -1,0 +1,85 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="en.htwg.seapal"
+    android:name=".SeaPalApplication"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+	<uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="15" />
+	
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
+	<supports-screens
+	    android:xlargeScreens="true"
+	    android:largeScreens="true"
+	    android:normalScreens="true"
+	    android:anyDensity="false"/>
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo"
+        android:allowBackup="true" >
+        <uses-library android:name="com.google.android.maps" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".gui.activity.MapViewActivity"
+            android:theme="@style/customActivity" >
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </activity>
+        <activity android:name=".gui.activity.LogbookActivity"
+            android:theme="@style/customActionBarActivity" >
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </activity>
+        <activity android:name=".gui.activity.DashboardActivity"
+            android:theme="@style/customActionBarActivity" >
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </activity>
+        <activity android:name=".gui.activity.MarkActivity"
+            android:theme="@style/customActionBarActivity" >
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </activity>
+        <activity android:name=".gui.activity.RouteActivity"
+            android:theme="@style/customActionBarActivity" >
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </activity>
+        <activity android:name=".gui.activity.SelectMarkOnMapActivity"
+            android:theme="@style/customActionBarActivity" >
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </activity>
+        <activity android:name=".gui.activity.TripsActivity"
+            android:theme="@style/customActionBarActivity" >
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </activity>
+        <activity android:name=".gui.activity.TripEditActivity"
+            android:theme="@style/customActionBarActivity" >
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </activity>
+    </application>
+</manifest>

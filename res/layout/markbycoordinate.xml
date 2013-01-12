@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:paddingTop="60dp" >
+
+    <TextView
+        android:id="@+id/marksLatCoordinatesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lat"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:padding="15dp" />
+
+    <EditText
+        android:id="@+id/marksLatCoordinatesEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:padding="15dp" />
+
+    <TextView
+        android:id="@+id/marksLonCoordinatesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lon"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:padding="15dp" />
+
+    <EditText
+        android:id="@+id/marksLonCoordinatesEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:padding="15dp" />
+
+</LinearLayout>

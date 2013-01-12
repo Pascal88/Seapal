@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="8">
+        
+        <TableRow
+            android:id="@+id/row0"
+            android:layout_width="800dp"
+        	android:layout_height="wrap_content">
+            
+        	<TextView android:id="@+id/boatNameLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/logbookBoatname"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editBoatName"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text" />
+	        
+	        <TextView android:id="@+id/typeLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/logbookType"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editType"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+	        
+	        <TextView android:id="@+id/productionYearLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/productionYear"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editProductionYear"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="800dp"
+        	android:layout_height="wrap_content">
+            
+	        <TextView android:id="@+id/IdNumberLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/idNumber"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editIdNumber"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text" />
+	        
+	        <TextView android:id="@+id/draftsmanLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/draftsman"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editDraftsman"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+	        
+	        <TextView android:id="@+id/engineLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/engine"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editEngine"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="800dp"
+        	android:layout_height="wrap_content">
+            
+	        <TextView android:id="@+id/seilEmblemLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/sailEmblem"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editSailEmblem"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text" />
+	        
+	        <TextView android:id="@+id/lengthLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/length"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editLength"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+	        
+	        <TextView android:id="@+id/tankSizeLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/tankSize"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editTankSize"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_width="800dp"
+        	android:layout_height="wrap_content">
+            
+	        <TextView android:id="@+id/homePortLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/homePort"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editHomePort"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text" />
+	        
+	        <TextView android:id="@+id/widthLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/width"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editWidth"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+	        
+	        <TextView android:id="@+id/waterTankSizeLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/waterTankSize"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editWaterTankSize"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/row4"
+            android:layout_width="800dp"
+        	android:layout_height="wrap_content">
+            
+	        <TextView android:id="@+id/yachtClubLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/yachtClub"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editYachtClub"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text" />
+	        
+	        <TextView android:id="@+id/flotationDepthLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/flotationDepth"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editFlotationDepth"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+	        
+	        <TextView android:id="@+id/sewageWaterTankSizeLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/sewageWaterTankSize"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editSewageWaterTankSize"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/row5"
+            android:layout_width="800dp"
+        	android:layout_height="wrap_content">
+            
+	        <TextView android:id="@+id/ownerLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/owner"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editOwner"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text" />
+	        
+	        <TextView android:id="@+id/mastHeightLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/mastHeight"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editMastHeight"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+	        
+	        <TextView android:id="@+id/mainSailSizeLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/mainSailSize"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editMainSailSize"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/row6"
+            android:layout_width="800dp"
+        	android:layout_height="wrap_content">
+            
+	        <TextView android:id="@+id/insuranceLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/insurance"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editInsurance"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text" />
+	        
+	        <TextView android:id="@+id/displacementLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/displacement"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editDisplacement"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+	        
+	        <TextView android:id="@+id/genoaSizeLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/genoaSize"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editGenoaSize"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/row7"
+            android:layout_width="800dp"
+        	android:layout_height="wrap_content">
+            
+	        <TextView android:id="@+id/callSignLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/callSign"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editCallSign"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text" />
+	        
+	        <TextView android:id="@+id/rigKindLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/rigKind"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editRigKind"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+	        
+	        <TextView android:id="@+id/spiSizeLabel"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/spiSize"
+	        	android:padding="5dp" />
+	        
+	        <EditText
+	      		android:id="@+id/editSpiSize"
+	        	android:layout_width="130dp"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="text"/>
+        </TableRow>
+        
+    </TableLayout>
+
+	    <ListView
+      		android:id="@+id/boatlist"
+        	android:layout_width="match_parent"
+       		android:layout_height="850dp" />
+   
+    	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:orientation="vertical"
+		    android:layout_weight="2"
+		    android:padding="1dp" >
+	    
+    	    <TextView android:id="@+id/addLabel"
+		            android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="@string/add"
+		        	android:padding="5dp" />
+    	    
+    	    <ImageButton
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/menuButton"
+            android:src="@drawable/button" />
+    	    
+    	    <TextView android:id="@+id/deleteLabel"
+		            android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="@string/delete"
+		        	android:layout_toRightOf="@id/addButton"
+		        	android:padding="5dp" />
+    	    
+    	    <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/menuButton"
+            android:src="@drawable/button"
+            android:layout_toRightOf="@id/addButton" />
+    	    
+   		</RelativeLayout>
+
+
+</LinearLayout>

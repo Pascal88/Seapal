@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rbm_menu_background">#E0303030</color>
+    <color name="rbm_item_text_color">#ffffff</color>
+    <color name="aimarrowcolor">#C000ff00</color>
+    <color name="lightblue">#153853</color>
+    
+</resources>

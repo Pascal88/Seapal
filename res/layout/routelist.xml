@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/highlight_item" >
+    
+    <TextView 
+        android:id="@+id/routeListID"
+        android:layout_width="wrap_content"
+   	 	android:layout_height="wrap_content"
+   	 	android:text="@string/id"
+   	 	android:layout_marginLeft="10dp"/>
+    
+    <TextView 
+        android:id="@+id/routeListMarkName"
+        android:layout_width="wrap_content"
+   	 	android:layout_height="wrap_content"
+   	 	android:text="@string/markName"
+   	 	android:layout_marginLeft="60dp"/>
+    
+    <TextView 
+        android:id="@+id/routeListLat"
+        android:layout_width="wrap_content"
+   	 	android:layout_height="wrap_content"
+   	 	android:text="@string/lat"
+   	 	android:layout_marginLeft="200dp"/>
+    
+    <TextView 
+        android:id="@+id/routeListLon"
+        android:layout_width="wrap_content"
+   	 	android:layout_height="wrap_content"
+   	 	android:text="@string/lon"
+   	 	android:layout_marginLeft="310dp"/>
+    
+    <TextView 
+        android:id="@+id/routeListBearing"
+        android:layout_width="wrap_content"
+   	 	android:layout_height="wrap_content"
+   	 	android:text="@string/bearing"
+   	 	android:layout_marginLeft="420dp"/>
+    
+    <TextView 
+        android:id="@+id/routeListDistance"
+        android:layout_width="wrap_content"
+   	 	android:layout_height="wrap_content"
+   	 	android:text="@string/distance"
+   	 	android:layout_marginLeft="530dp"/>
+
+</RelativeLayout>

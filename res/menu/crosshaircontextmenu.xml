@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/crosshairMenuSetMark"
+        android:checkable="false"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/tool_pinpoint"
+        android:title="@string/setMark"
+        android:visible="true">
+    </item>
+    <item
+        android:id="@+id/crosshairMenuSetRoute"
+        android:checkable="false"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/tool_route"
+        android:title="@string/setRoute"
+        android:visible="true">
+    </item>
+    <item
+        android:id="@+id/crosshairMenuDistance"
+        android:checkable="false"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/distance_measure"
+        android:title="@string/calcDistance"
+        android:visible="true">
+    </item>
+    <item
+        android:id="@+id/crosshairMenuSetAim"
+        android:checkable="false"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/ann_cursor"
+        android:title="@string/aim"
+        android:visible="true">
+    </item>
+    <item
+        android:id="@+id/crosshairMenuDelete"
+        android:checkable="false"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/delete"
+        android:title="@string/delete"
+        android:visible="true">
+    </item>
+
+</menu>

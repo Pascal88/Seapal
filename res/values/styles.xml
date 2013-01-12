@@ -1,0 +1,39 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    <style name="popupMenu">
+        <item name="android:paddingTop">50dp</item>
+    </style>
+
+    <style name="blackLetters">
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="whiteLetters">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="tinyLetters" parent="blackLetters">
+        <item name="android:textSize">7dp</item>
+    </style>
+    <style name="littleLetters">
+        <item name="android:textSize">10dp</item>
+    </style>
+    <style name="mediumLetters">
+        <item name="android:textSize">15dp</item>
+    </style>
+    
+    <style name="mediumBlackLetters" parent="blackLetters">
+        <item name="android:textSize">15dp</item>
+    </style>
+    <style name="smallLetters" parent="blackLetters">
+        <item name="android:textSize">10dp</item>
+    </style>     
+	<style name="customActivity" parent="@style/customActionBarActivity">
+	    <item name="android:windowActionBarOverlay">false</item>
+	</style>
+	<style name="ActionBar" parent="@android:style/Widget.Holo.ActionBar">
+		<item name="android:background">@drawable/head</item>
+	</style>
+	<style name="customActionBarActivity" parent="@android:style/Theme.Holo">
+	    <item name="android:actionBarStyle">@style/ActionBar</item>
+	</style>
+</resources>

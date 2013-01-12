@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/markMenuRename"
+        android:checkable="false"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/renameicon"
+        android:title="@string/rename"
+        android:visible="true">
+    </item>
+    <item
+        android:id="@+id/markMenuMove"
+        android:checkable="false"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/moveicon"
+        android:title="@string/move"
+        android:visible="true">
+    </item>
+    <item
+        android:id="@+id/markMenuDelete"
+        android:checkable="false"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/delete"
+        android:title="@string/delete"
+        android:visible="true">
+    </item>
+    <item
+        android:id="@+id/markMenuAim"
+        android:checkable="false"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/ann_cursor"
+        android:title="@string/aim"
+        android:visible="true">
+    </item>
+
+</menu>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:columnCount="2"
+	        android:rowCount="3" >
+	        
+        <TableRow 
+            android:id="@+id/row0"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content">
+	        	
+            
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:padding="10dp" >
+                
+                <ImageView android:id="@+id/cogImg"
+	            	android:layout_width="250dp"
+	        		android:layout_height="wrap_content"
+	        		android:contentDescription="@string/menuButton"
+             		android:src="@drawable/buttonlarge"
+             		android:scaleType="fitXY"
+             		android:layout_centerHorizontal="true" />
+                
+                <TextView android:id="@+id/dashboardCogLabel"
+                    android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:text="COG"
+	        		android:layout_centerHorizontal="true"
+	        		android:textAppearance="?android:attr/textAppearanceLarge"
+	        		android:layout_marginTop="10dp" />
+                
+                <SeekBar
+        			android:id="@+id/seekBarCog"
+        			android:layout_width="380dp"
+        			android:layout_height="wrap_content"
+        			android:layout_below="@id/cogImg" />
+                
+                <en.htwg.seapal.gui.DashboardView
+                    android:id="@+id/cogDashboardView" 
+                    android:layout_width="380dp"
+	        		android:layout_height="500dp"
+	        		android:layout_below="@id/seekBarCog" />             
+            </RelativeLayout>
+            
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:padding="10dp" >
+                
+                <ImageView android:id="@+id/sogImg"
+	            	android:layout_width="250dp"
+	        		android:layout_height="wrap_content"
+	        		android:contentDescription="@string/menuButton"
+             		android:src="@drawable/buttonlarge"
+             		android:scaleType="fitXY"
+             		android:layout_centerHorizontal="true" />
+                
+                <TextView android:id="@+id/dashboardSogLabel"
+                    android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:text="SOG"
+	        		android:layout_centerHorizontal="true"
+	        		android:textAppearance="?android:attr/textAppearanceLarge"
+	        		android:layout_marginTop="10dp" />
+                
+                <SeekBar
+        			android:id="@+id/seekBarSog"
+        			android:layout_width="380dp"
+        			android:layout_height="wrap_content"
+        			android:layout_below="@id/sogImg" />
+                
+                <en.htwg.seapal.gui.DashboardView
+                    android:id="@+id/sogDashboardView" 
+                    android:layout_width="380dp"
+	        		android:layout_height="500dp"
+	        		android:layout_below="@id/seekBarSog" />             
+            </RelativeLayout>
+            
+        </TableRow>
+        
+        <TableRow 
+            android:id="@+id/row1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content">
+	        	
+            
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:padding="10dp" >
+                
+                <ImageView android:id="@+id/btmImg"
+	            	android:layout_width="250dp"
+	        		android:layout_height="wrap_content"
+	        		android:contentDescription="@string/menuButton"
+             		android:src="@drawable/buttonlarge"
+             		android:scaleType="fitXY"
+             		android:layout_centerHorizontal="true" />
+                
+                <TextView android:id="@+id/dashboardBtmLabel"
+                    android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:text="BTM"
+	        		android:layout_centerHorizontal="true"
+	        		android:textAppearance="?android:attr/textAppearanceLarge"
+	        		android:layout_marginTop="10dp" />
+                
+                <SeekBar
+        			android:id="@+id/seekBarBtm"
+        			android:layout_width="380dp"
+        			android:layout_height="wrap_content"
+        			android:layout_below="@id/btmImg" />
+                
+                <en.htwg.seapal.gui.DashboardView
+                    android:id="@+id/btmDashboardView" 
+                    android:layout_width="380dp"
+	        		android:layout_height="500dp"
+	        		android:layout_below="@id/seekBarBtm" />             
+            </RelativeLayout>
+            
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:padding="10dp" >
+                
+                <ImageView android:id="@+id/dtmImg"
+	            	android:layout_width="250dp"
+	        		android:layout_height="wrap_content"
+	        		android:contentDescription="@string/menuButton"
+             		android:src="@drawable/buttonlarge"
+             		android:scaleType="fitXY"
+             		android:layout_centerHorizontal="true" />
+                
+                <TextView android:id="@+id/dashboardDtmLabel"
+                    android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:text="DTM"
+	        		android:layout_centerHorizontal="true"
+	        		android:textAppearance="?android:attr/textAppearanceLarge"
+	        		android:layout_marginTop="10dp" />
+                
+                <SeekBar
+        			android:id="@+id/seekBarDtm"
+        			android:layout_width="380dp"
+        			android:layout_height="wrap_content"
+        			android:layout_below="@id/dtmImg" />
+                
+                <en.htwg.seapal.gui.DashboardView
+                    android:id="@+id/DtmDashboardView" 
+                    android:layout_width="380dp"
+	        		android:layout_height="500dp"
+	        		android:layout_below="@id/seekBarDtm" />             
+            </RelativeLayout>
+            
+            </TableRow>
+        
+
+    </TableLayout>

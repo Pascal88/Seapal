@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageView 
+        android:id="@+id/backRoute"
+        android:layout_width="wrap_content"	
+    	android:layout_height="wrap_content"
+    	android:src="@drawable/overlaybackground"
+    	android:layout_centerHorizontal="true"
+    	android:layout_marginTop="10dp"
+    	android:contentDescription="@string/accept"/>
+    
+    <TextView 
+        android:id="@+id/textRouteNumber"
+        android:layout_width="wrap_content"	
+    	android:layout_height="wrap_content"
+    	android:layout_centerHorizontal="true"
+    	android:text="@string/minute"
+    	android:layout_marginTop="20dp"
+    	style="@style/blackLetters"
+    	android:textAppearance="?android:attr/textAppearanceLarge"/>
+    
+
+    <ImageView
+        android:id="@+id/backRoute2"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/accept"
+        android:src="@drawable/overlaybackground2"
+        android:layout_marginTop="12dp" />
+    
+    <Button
+        android:id="@+id/saveRouteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/sel_new_button"
+        android:drawableStart="@drawable/save"
+        android:gravity="center"
+        android:text="@string/save"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="30dp" />
+    
+    <Button
+        android:id="@+id/undoRouteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/sel_cont_button"
+        android:drawableStart="@drawable/undo"
+        android:gravity="center"
+        android:text="@string/undo"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="30dp" />
+    
+    <Button
+        android:id="@+id/finishRouteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/sel_delete_button"
+        android:drawableStart="@drawable/delete"
+        android:gravity="center"
+        android:text="@string/finish"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="30dp" />
+
+</RelativeLayout>

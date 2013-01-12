@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/tab2inner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/marksBearingCross1Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/bearing"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/marksBearingCross1Edit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="15dp" />
+
+        <TextView
+            android:id="@+id/marksAtCross1Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/at"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/marksAtCross1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/useCurLoc" />
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/inv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/marksLatCoordinatesLabel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/lat"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/marksLatCoordinatesEdit1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="15dp" />
+
+            <TextView
+                android:id="@+id/marksLonCoordinatesLabel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/lon"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/marksLonCoordinatesEdit1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="15dp" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab2inner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/marksBearingCross2Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/bearing"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/marksBearingCross2Edit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="15dp" />
+
+        <TextView
+            android:id="@+id/marksAtCross2Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/at"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/marksAtCross2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/useCurLoc" />
+        
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/inv2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/marksLatCoordinatesLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/lat"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/marksLatCoordinatesEdit2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="15dp" />
+
+            <TextView
+                android:id="@+id/marksLonCoordinatesLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/lon"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/marksLonCoordinatesEdit2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="15dp" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.google.android.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/myGMap"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:apiKey="0_QXbRf-wOv0KEslY64I2qHS89jYR6-dNRmN3Hw"
+            android:clickable="true"
+            android:enabled="true" >
+        </com.google.android.maps.MapView>
+
+        <fragment
+                android:id="@+id/menu"
+                android:name="en.htwg.seapal.gui.fragment.MenuFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:layout_marginTop="270dp"                
+                android:layout_centerHorizontal="true" />
+        
+        <RelativeLayout
+                android:id="@+id/menuDropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+        
+        <RelativeLayout
+                android:id="@+id/toolsDropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right" />
+        
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                
+            <en.htwg.seapal.gui.RibbonMenuView
+                	android:id="@+id/mapMenuRibbon"
+                	android:layout_width="match_parent"
+                	android:layout_height="match_parent" />
+        </FrameLayout>
+        
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                
+            <en.htwg.seapal.gui.RibbonMenuView
+                	android:id="@+id/markMenuRibbon"
+                	android:layout_width="match_parent"
+                	android:layout_height="match_parent" />
+        </FrameLayout>
+        
+        <RelativeLayout
+                android:id="@+id/mapViewDragable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <RelativeLayout
+                android:id="@+id/mapViewDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        
+    </RelativeLayout>
