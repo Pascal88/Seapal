@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:id="@+id/mainMenuGoogleMap" android:visible="true" android:checkable="false" android:title="@string/googleMapMenuItem" android:enabled="true" android:checked="false"></item>
-    <item android:id="@+id/mainMenuOsmMap" android:visible="true" android:checkable="false" android:title="@string/openSeaMapMenuItem" android:enabled="true" android:checked="false"></item>
-    
-
-</menu>

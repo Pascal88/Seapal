@@ -11,6 +11,7 @@ import android.content.Context;
 import android.database.Cursor;
 
 public class Trip implements Serializable{
+	private static final long serialVersionUID = 6280753321364235252L;
 	public String Primary = "ID";
 	public int ID;
 	public int boatID;

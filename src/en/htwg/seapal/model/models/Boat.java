@@ -6,6 +6,7 @@ import android.database.Cursor;
 
 public class Boat implements IModel, Serializable{
 
+	private static final long serialVersionUID = -8081653149708289979L;
 	public String Primary = "ID";
 	public int ID;
 	public String name;

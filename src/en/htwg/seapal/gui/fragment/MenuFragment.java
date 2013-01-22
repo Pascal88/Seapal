@@ -5,7 +5,6 @@ import en.htwg.seapal.gui.listener.mapView.GotoDashboardClickListener;
 import en.htwg.seapal.gui.listener.mapView.GotoLogbookClickListener;
 import en.htwg.seapal.gui.listener.mapView.GotoMarksClickListener;
 import en.htwg.seapal.gui.listener.mapView.GotoRoutesClickListener;
-import en.htwg.seapal.gui.listener.mapView.GotoWeatherClickListener;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,8 +19,6 @@ public class MenuFragment extends Fragment {
 	private ImageButton marks = null;
 	private ImageButton routes = null;
 
-	private ImageButton weather = null;
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -47,10 +44,6 @@ public class MenuFragment extends Fragment {
 		routes = (ImageButton) view.findViewById(R.id.route);
 		routes.setClickable(true);
 		routes.setOnClickListener(new GotoRoutesClickListener(getActivity()));
-		
-		weather = (ImageButton) view.findViewById(R.id.weather);
-		weather.setClickable(true);
-		weather.setOnClickListener(new GotoWeatherClickListener(getActivity()));
 		
 		return view;
 	}

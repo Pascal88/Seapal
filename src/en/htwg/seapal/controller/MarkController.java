@@ -15,7 +15,7 @@ import en.htwg.seapal.gui.adapter.MarkSpinnerAdapter;
 import en.htwg.seapal.model.models.Mark;
 import en.htwg.seapal.model.tables.TableMark;
 
-public class MarkController implements IController{
+public class MarkController {
 	
 	private Activity activity = null;
 	

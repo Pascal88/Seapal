@@ -1,7 +1,6 @@
 package en.htwg.seapal.gui.listener.trips;
 
 import en.htwg.seapal.gui.activity.TripEditActivity;
-import en.htwg.seapal.gui.activity.TripsActivity;
 import en.htwg.seapal.gui.adapter.TripsAdapter;
 import android.content.Context;
 import android.content.Intent;

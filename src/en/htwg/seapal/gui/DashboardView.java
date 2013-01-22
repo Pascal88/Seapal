@@ -9,7 +9,6 @@ import java.util.List;
 
 import en.htwg.seapal.R;
 import en.htwg.seapal.gui.listener.dashboard.SeekBarChangeListener;
-import en.htwg.seapal.model.tables.TableLog;
 import en.htwg.seapal.model.tables.TableLog.Tupel;
 import android.content.Context;
 import android.graphics.Bitmap;

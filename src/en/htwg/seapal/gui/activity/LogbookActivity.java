@@ -46,7 +46,6 @@ public class LogbookActivity extends AActivity {
 	private EditText rigKind;
 	private EditText spiSize;
 	private ImageButton add;
-	private ImageButton delete;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +91,6 @@ public class LogbookActivity extends AActivity {
 		
 		add = (ImageButton) findViewById(R.id.addButton);
 		add.setOnClickListener(new AddBoatClickListener(getApplicationContext(), adapter, this));
-		delete = (ImageButton) findViewById(R.id.deleteButton);
 	}
 	
 	public void backToMap(View v) {

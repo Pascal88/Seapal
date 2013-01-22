@@ -15,7 +15,7 @@ import en.htwg.seapal.gui.overlay.IOverlay;
 import en.htwg.seapal.model.models.GeoInformation;
 import en.htwg.seapal.model.tables.TableGeoInformation;
 
-public class GeoInformationController implements IController {
+public class GeoInformationController {
 	
 	private GeoInformation geoInformation = null;
 	private GeoInformation last = null;

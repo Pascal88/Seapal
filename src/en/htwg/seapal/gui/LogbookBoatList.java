@@ -1,11 +1,8 @@
 package en.htwg.seapal.gui;
 
-import java.lang.reflect.InvocationTargetException;
-
 import en.htwg.seapal.controller.LogbookController;
 import en.htwg.seapal.gui.adapter.BoatAdapter;
 import en.htwg.seapal.model.models.Boat;
-import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;

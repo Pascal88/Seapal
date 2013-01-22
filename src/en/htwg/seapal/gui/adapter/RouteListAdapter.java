@@ -1,25 +1,13 @@
 package en.htwg.seapal.gui.adapter;
 
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.List;
 
-import en.htwg.seapal.R;
-import en.htwg.seapal.controller.GeoInformationController;
-import en.htwg.seapal.controller.RouteController;
-import en.htwg.seapal.model.models.GeoInformation;
 import en.htwg.seapal.model.models.Route;
 import en.htwg.seapal.model.models.RoutePoint;
 
 import android.app.Activity;
-import android.location.Location;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
-import android.widget.TextView;
 
 public class RouteListAdapter extends ArrayAdapter<RoutePoint> implements ListAdapter {
 

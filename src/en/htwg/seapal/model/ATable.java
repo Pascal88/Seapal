@@ -5,7 +5,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import java.sql.Date;
 
-import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

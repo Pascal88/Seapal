@@ -12,7 +12,6 @@ import com.google.android.maps.Overlay;
 
 import en.htwg.seapal.R;
 import en.htwg.seapal.gui.activity.IMapActivity;
-import en.htwg.seapal.gui.activity.MapViewActivity;
 
 public class RouteOverlay extends Overlay implements IOverlay {
 

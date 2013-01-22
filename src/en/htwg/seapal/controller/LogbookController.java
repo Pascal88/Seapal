@@ -3,13 +3,12 @@ package en.htwg.seapal.controller;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import android.app.Activity;
 import android.content.Context;
 
 import en.htwg.seapal.model.models.Boat;
 import en.htwg.seapal.model.tables.TableBoat;
 
-public class LogbookController implements IController {
+public class LogbookController {
 
 	private Context activity = null;
 	

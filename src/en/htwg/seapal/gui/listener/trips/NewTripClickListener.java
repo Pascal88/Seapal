@@ -3,7 +3,6 @@ package en.htwg.seapal.gui.listener.trips;
 import en.htwg.seapal.gui.fragment.NewTripDialogFragment;
 import en.htwg.seapal.model.models.Trip;
 import android.app.Activity;
-import android.content.Context;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;

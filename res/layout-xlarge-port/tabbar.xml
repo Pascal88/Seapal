@@ -121,33 +121,4 @@
         
     </LinearLayout>
             
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        
-        <ImageButton
-            android:id="@+id/weather"
-            android:layout_width="60dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="35dp"
-            android:background="@null"
-            android:contentDescription="@string/menuButton"
-            android:scaleType="fitXY"
-            android:src="@drawable/weathericon"
-            android:onClick="" />
-            
-            <TextView 
-            android:id="@+id/weatherText"
-            style="@style/mediumBlackLetters"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:text="@string/weatherText" 
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="35dp"
-            android:paddingRight="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-                
-    </LinearLayout>
 </LinearLayout>
