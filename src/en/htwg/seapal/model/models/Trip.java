@@ -5,8 +5,6 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-import en.htwg.seapal.model.tables.TableTripPoint;
-
 import android.content.Context;
 import android.database.Cursor;
 
@@ -26,7 +24,6 @@ public class Trip implements Serializable{
 	public Date end;
 	public int engine;
 	public Boolean tanked;
-	public List<TripPoint> points = null;
 	
 	public Trip() {
 		ID = 0;
@@ -42,7 +39,6 @@ public class Trip implements Serializable{
 		end = new Date(0L);
 		engine = 0;
 		tanked = false;
-		points = new ArrayList<TripPoint>();
 	}
 
 	public Trip(Cursor cursor, Context context) {
@@ -60,7 +56,6 @@ public class Trip implements Serializable{
 		this.end = new Date(cursor.getLong(cursor.getColumnIndex("end")));
 		this.engine = cursor.getInt(cursor.getColumnIndex("engine"));
 		this.tanked = (cursor.getInt(cursor.getColumnIndex("tanked")) == 1);
-		this.points = new TableTripPoint(context).selectTrip(ID);
 	}
 	
 	public int getEngine() {
@@ -149,14 +144,6 @@ public class Trip implements Serializable{
 
 	public void setNotes(String notes) {
 		this.notes = notes;
-	}
-
-	public List<TripPoint> getPoints() {
-		return points;
-	}
-
-	public void setPoints(List<TripPoint> points) {
-		this.points = points;
 	}
 
 	public Date getStart() {

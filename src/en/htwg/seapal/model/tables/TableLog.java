@@ -43,28 +43,69 @@ public class TableLog extends ATable {
 			list.add(t);
 		}
 		
+		return normalize(list);
+	}
+	
+	public List<Tupel<Date, Float>> getSog() {
+		List<Tupel<Date, Float>> list = new ArrayList<Tupel<Date, Float>>();
+		String[] columns = {"timestamp","sog"};
+		Cursor c = db.query(this.Table_Name, columns, null, null, null, null, "timestamp ASC");
+		while(c.moveToNext()) {
+			Tupel<Date, Float> t = new Tupel<Date, Float>(new Date(c.getLong(c.getColumnIndex("timestamp"))), c.getFloat(c.getColumnIndex("sog")));
+			list.add(t);
+		}
+		
+		return normalize(list);
+	}
+	
+	public List<Tupel<Date, Float>> getBtm() {
+		List<Tupel<Date, Float>> list = new ArrayList<Tupel<Date, Float>>();
+		String[] columns = {"timestamp","btm"};
+		Cursor c = db.query(this.Table_Name, columns, null, null, null, null, "timestamp ASC");
+		while(c.moveToNext()) {
+			Tupel<Date, Float> t = new Tupel<Date, Float>(new Date(c.getLong(c.getColumnIndex("timestamp"))), c.getFloat(c.getColumnIndex("btm")));
+			list.add(t);
+		}
+		
+		return normalize(list);
+	}
+	
+	public List<Tupel<Date, Float>> getDtm() {
+		List<Tupel<Date, Float>> list = new ArrayList<Tupel<Date, Float>>();
+		String[] columns = {"timestamp","dtm"};
+		Cursor c = db.query(this.Table_Name, columns, null, null, null, null, "timestamp ASC");
+		while(c.moveToNext()) {
+			Tupel<Date, Float> t = new Tupel<Date, Float>(new Date(c.getLong(c.getColumnIndex("timestamp"))), c.getFloat(c.getColumnIndex("dtm")));
+			list.add(t);
+		}
+		
+		return normalize(list);
+	}
+	
+	private List<Tupel<Date, Float>> normalize (List<Tupel<Date, Float>> list) {
 		List<Tupel<Date, Float>> out = new ArrayList<Tupel<Date, Float>>();
 		Iterator<Tupel<Date, Float>> it = list.iterator();
+		
 		Date timeStep = list.get(0).a;
 		long step = 30 * 1000;
 		timeStep.setTime(timeStep.getTime() - (timeStep.getTime() % step));
 		
 		int count = 0;
-		float cog = 0;
+		float fl = 0;
 		while(it.hasNext()) {
 			Tupel<Date, Float> tmp = it.next();
 			if(tmp.a.getTime() < (timeStep.getTime() + step)) {
-				cog += tmp.b;
+				fl += tmp.b;
 				count++;
 			} else if(tmp.a.getTime() > (timeStep.getTime() + step)) {
-				out.add(new Tupel<Date, Float>(timeStep, (cog/count)));
+				out.add(new Tupel<Date, Float>(timeStep, (fl/count)));
 				timeStep.setTime(timeStep.getTime() + step);
-				cog = 0;
+				fl = 0;
 				count = 0;
 			}
 		}
 
 		return out;
 	}
-
+	
 }
