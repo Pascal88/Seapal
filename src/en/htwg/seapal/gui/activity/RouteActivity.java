@@ -35,7 +35,6 @@ public class RouteActivity extends AActivity {
 	private Spinner marks = null;
 	private Button up = null;
 	private Button edit = null;
-	private Button set = null;
 	private Button down = null;
 	
 	//Fragmente	
@@ -68,7 +67,6 @@ public class RouteActivity extends AActivity {
 		marks = (Spinner) findViewById(R.id.addMarkSpinner);
 		up = (Button) findViewById(R.id.upButton);
 		edit = (Button) findViewById(R.id.editButton);
-		set = (Button) findViewById(R.id.setButton);
 		down = (Button) findViewById(R.id.downButton);
 		
 		routeSpinnerAdapter = routeController.getRouteSpinnerAdapter();
@@ -88,9 +86,6 @@ public class RouteActivity extends AActivity {
 		
 		edit.setClickable(true);
 		edit.setOnClickListener(new EditClickListener(this));
-		
-		set.setClickable(true);
-		set.setOnClickListener(new SetClickListener());
 		
 		down.setClickable(true);
 		down.setOnClickListener(new DownClickListener(this));
