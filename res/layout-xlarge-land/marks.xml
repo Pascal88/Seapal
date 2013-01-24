@@ -41,7 +41,7 @@
 	        	android:layout_toRightOf="@id/editMarkName"
 	        	android:paddingLeft="100dp"
 	        	android:paddingTop="10dp" />
-        
+
         <EditText
             	android:id="@+id/editMarkLabel"
             	android:layout_width="150dp"

@@ -4,12 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <fragment
-        android:id="@+id/headLogbook"
-        android:name="en.htwg.captainslog.gui.LogbookHeadFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -27,12 +21,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/addEditMarkLabel"
-            android:paddingLeft="600dp"
+            android:paddingLeft="500dp"
             android:paddingTop="10dp"
             android:text="@string/editMarkName"
             android:textAppearance="?android:attr/textAppearanceMedium" />
         
-        <EditText android:id="@+id/editName"
+        <EditText android:id="@+id/editMarkName"
             	android:layout_width="150dp"
 	        	android:layout_height="wrap_content"
 	        	android:layout_toRightOf="@id/nameMarkLabel"
@@ -44,12 +38,12 @@
 	        	android:layout_height="wrap_content"
 	        	android:text="@string/editMarkLabel"
 	        	android:textAppearance="?android:attr/textAppearanceMedium"
-	        	android:layout_toRightOf="@id/editName"
+	        	android:layout_toRightOf="@id/editMarkName"
 	        	android:paddingLeft="100dp"
 	        	android:paddingTop="10dp" />
         
         <EditText
-            	android:id="@+id/editLabel"
+            	android:id="@+id/editMarkLabel"
             	android:layout_width="150dp"
             	android:layout_height="wrap_content"
            		android:layout_toRightOf="@id/markLabelText"
@@ -60,7 +54,7 @@
 
 <LinearLayout android:id="@+id/tabContent"
     android:layout_width="wrap_content"
-	android:layout_height="300dp">
+	android:layout_height="200dp">
     
 </LinearLayout>
 
@@ -73,6 +67,6 @@
 	<ListView
       	android:id="@+id/markListView"
         android:layout_width="match_parent"
-       	android:layout_height="300dp" />
+       	android:layout_height="400dp" />
 
 </LinearLayout>
