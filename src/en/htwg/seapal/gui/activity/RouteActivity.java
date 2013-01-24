@@ -23,7 +23,6 @@ import en.htwg.seapal.gui.listener.route.MarkSpinnerItemSelectListener;
 import en.htwg.seapal.gui.listener.route.RouteNameFocusListener;
 import en.htwg.seapal.gui.listener.route.RouteSpinnerSelectedItemListener;
 import en.htwg.seapal.gui.listener.route.SetClickListener;
-import en.htwg.seapal.gui.listener.route.StartRouteClickListener;
 import en.htwg.seapal.gui.listener.route.UpClickListener;
 import en.htwg.seapal.model.models.Mark;
 import en.htwg.seapal.model.models.Route;
@@ -34,7 +33,6 @@ public class RouteActivity extends AActivity {
 	private EditText routeName = null;
 	private Spinner routes = null;
 	private Spinner marks = null;
-	private Button startRoute = null;
 	private Button up = null;
 	private Button edit = null;
 	private Button set = null;
@@ -68,7 +66,6 @@ public class RouteActivity extends AActivity {
 		routeName = (EditText) findViewById(R.id.routeNameEdit);// map UI
 		routes = (Spinner) findViewById(R.id.routesSpinner);
 		marks = (Spinner) findViewById(R.id.addMarkSpinner);
-		startRoute = (Button) findViewById(R.id.startRouteButton);
 		up = (Button) findViewById(R.id.upButton);
 		edit = (Button) findViewById(R.id.editButton);
 		set = (Button) findViewById(R.id.setButton);
@@ -85,9 +82,6 @@ public class RouteActivity extends AActivity {
 		
 		routeName.setText(((Route) routeSpinnerAdapter.getItem(0)).name);
 		routeName.setOnFocusChangeListener(new RouteNameFocusListener(this));
-		
-		startRoute.setClickable(true);
-		startRoute.setOnClickListener(new StartRouteClickListener());
 		
 		up.setClickable(true);
 		up.setOnClickListener(new UpClickListener(this));

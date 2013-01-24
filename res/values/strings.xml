@@ -173,4 +173,16 @@
 	<string name="crew">Crew</string>
 	<string name="startLogging">Start Logging</string>
 	<string name="newTrip">New Trip</string>
+	<string-array name="mainMenu">
+	    <item>Google Maps</item>
+	    <item>Open Sea Map</item>
+	    <item>Add Mark</item>
+	    <item>Add Route</item>
+	    <item>Distance</item>
+	    <item>Center Map</item>
+	    <item>Set Aim</item>
+	    <item>Discard Target</item>
+	</string-array>
+	    <string name="mainMenuTitle">Menu</string>
+	    <string name="toolsmenu">Tools</string>
 </resources>

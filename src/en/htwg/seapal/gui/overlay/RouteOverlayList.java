@@ -150,12 +150,6 @@ public class RouteOverlayList extends Overlay {
 			rel.removeView(view);
 			view = null;
 		}
-		
-		if(!overlays.isEmpty()) {
-			overlays.clear();
-		}
-		
-		list.remove(this);
 	}
 	
 	public void setDistanceText(float dist) {

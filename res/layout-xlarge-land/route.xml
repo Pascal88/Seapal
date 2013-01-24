@@ -27,17 +27,6 @@
     		android:layout_row="0"
     		android:inputType="text"/>
         
-        <Button 
-            android:id="@+id/startRouteButton"
-            android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:text="@string/startRoute"
-        	android:gravity="center_vertical"
-        	android:layout_gravity="fill_vertical|right"
-        	android:layout_column="2"
-    		android:layout_row="0"
-    		android:layout_rowSpan="2"/>
-        
         <Spinner 
             android:id="@+id/routesSpinner"
             android:layout_width="150dp"
@@ -85,14 +74,6 @@
         		android:layout_height="wrap_content"
         		android:layout_gravity="fill_horizontal"
         		android:text="@string/edit"
-        		android:gravity="center_vertical" />
-            
-            <Button 
-            	android:id="@+id/setButton"
-            	android:layout_width="wrap_content"
-        		android:layout_height="wrap_content"
-        		android:layout_gravity="fill_horizontal"
-        		android:text="@string/set"
         		android:gravity="center_vertical" />
             
             <Button 

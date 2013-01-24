@@ -18,8 +18,15 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.GestureDetector;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import com.google.android.maps.GeoPoint;
@@ -31,27 +38,25 @@ import com.google.android.maps.Overlay;
 import en.htwg.seapal.R;
 import en.htwg.seapal.controller.GeoInformationController;
 import en.htwg.seapal.gui.MyMenuView;
-import en.htwg.seapal.gui.fragment.DropdownFragmentLeft;
-import en.htwg.seapal.gui.fragment.DropdownFragmentRight;
 import en.htwg.seapal.gui.listener.GeoInfoListener;
 import en.htwg.seapal.gui.listener.MapTouchListener;
 import en.htwg.seapal.gui.listener.mapView.IMapGestureListener;
+import en.htwg.seapal.gui.listener.mapView.MainMenuOnNavigationListener;
 import en.htwg.seapal.gui.listener.mapView.MapGestureTapListener;
 import en.htwg.seapal.gui.listener.mapView.MapMenuItemClickListener;
 import en.htwg.seapal.gui.listener.mapView.MarkMenuItemClickListener;
+import en.htwg.seapal.gui.listener.mark.AddMarkClickListener;
 import en.htwg.seapal.gui.overlay.AimOverlay;
 import en.htwg.seapal.gui.overlay.DistanceOverlayList;
 import en.htwg.seapal.gui.overlay.MyGoogleLocationOverlay;
 import en.htwg.seapal.gui.overlay.RouteOverlayList;
 import en.htwg.seapal.model.models.GeoInformation;
 
-public class MapViewActivity extends MapActivity implements IMapActivity{
+public class MapViewActivity extends MapActivity implements IMapActivity, IMapViewActivity{
 
 	private MapView mapView = null;
 	private MapController mapController = null;
 	private MyGoogleLocationOverlay locationOverlay = null;
-	private DropdownFragmentLeft dropdownFragmentLeft = null;
-	private DropdownFragmentRight dropdownFragmentRight = null;
 	private GestureDetector gestureDetector = null;
 	private ActionBar actionBar = null;
 	private GoogleTilesOverlay Seamarktiles = null;
@@ -71,7 +76,6 @@ public class MapViewActivity extends MapActivity implements IMapActivity{
 		setupOsmTiles(); // needs to be called before setContentView
 		setContentView(R.layout.map);
 		actionBar = getActionBar();
-		initActionBar(); // initialize Actionbar
 
 		// Creating and initializing Map
 		mapView = (MapView) findViewById(R.id.myGMap);
@@ -82,7 +86,6 @@ public class MapViewActivity extends MapActivity implements IMapActivity{
 		setupMap(); // setup the google map
 		setUpLocationListening(); // start the Location Listening
 
-		initFragments();
 		createMapMenu();
 		createMarkMenu();
 
@@ -91,18 +94,13 @@ public class MapViewActivity extends MapActivity implements IMapActivity{
 
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#editPositionText(en.htwg.seapal.model.models.GeoInformation)
+	 */
 	@Override
-	protected void onDestroy() {
-		// killFragments();
-		super.onDestroy();
-	}
-
 	public void editPositionText(GeoInformation geoInformation) {
-		TextView positionText = (TextView) findViewById(R.id.positionText);// find
-																			// Position
-																			// Text
 
-		float knots = (float) (geoInformation.getSpeed() / 0.514444);// get cur
+		/*float knots = (float) (geoInformation.getSpeed() / 0.514444);// get cur
 																		// Speed
 																		// m/s
 																		// make
@@ -122,93 +120,75 @@ public class MapViewActivity extends MapActivity implements IMapActivity{
 						Location.FORMAT_SECONDS)
 				+ " Lon "
 				+ Location.convert(geoInformation.getLongitude() * 0.000001,
-						Location.FORMAT_SECONDS));
+						Location.FORMAT_SECONDS));*/
 	}
 
-	private void initFragments() {
-		FragmentManager fragmentManager = getFragmentManager();
-		FragmentTransaction fragmentTransaction = fragmentManager
-				.beginTransaction();
-
-		dropdownFragmentLeft = new DropdownFragmentLeft();
-		fragmentTransaction.add(R.id.menuDropDown, dropdownFragmentLeft);
-		fragmentTransaction.hide(dropdownFragmentLeft);
-
-		dropdownFragmentRight = new DropdownFragmentRight();
-		fragmentTransaction.add(R.id.toolsDropDown, dropdownFragmentRight);
-		fragmentTransaction.hide(dropdownFragmentRight);
-
-		fragmentTransaction.commit();
-	}
-
-	private void killFragments() {
-		FragmentManager fragmentManager = getFragmentManager();
-		FragmentTransaction fragmentTransaction = fragmentManager
-				.beginTransaction();
-
-		fragmentTransaction.remove(dropdownFragmentLeft);
-		fragmentTransaction.remove(dropdownFragmentRight);
-
-		fragmentTransaction.commit();
-	}
-
-	public void showMenuPopup(View v) {
-
-		FragmentManager fragmentManager = getFragmentManager();
-		FragmentTransaction fragmentTransaction = fragmentManager
-				.beginTransaction();
-
-		if (!dropdownFragmentRight.isHidden()) {
-			fragmentTransaction.hide(dropdownFragmentRight);
-		}
-
-		if (dropdownFragmentLeft.isHidden()) {
-			fragmentTransaction.show(dropdownFragmentLeft);
-		} else {
-			fragmentTransaction.hide(dropdownFragmentLeft);
-		}
-
-		fragmentTransaction.commit();
-	}
-
-	public void showToolsPopup(View v) {
-
-		FragmentManager fragmentManager = getFragmentManager();
-		FragmentTransaction fragmentTransaction = fragmentManager
-				.beginTransaction();
-
-		if (!dropdownFragmentLeft.isHidden()) {
-			fragmentTransaction.hide(dropdownFragmentLeft);
-		}
-
-		if (dropdownFragmentRight.isHidden()) {
-			fragmentTransaction.show(dropdownFragmentRight);
-		} else {
-			fragmentTransaction.hide(dropdownFragmentRight);
-		}
-
-		fragmentTransaction.commit();
-	}
-
-	public void useGoogleMap(View v) {
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#useGoogleMap()
+	 */
+	@Override
+	public void useGoogleMap() {
 		List<Overlay> list = ((MapView) mapView).getOverlays();
 		list.remove(osmMapTiles);
 	}
 
-	public void useOsmMap(View v) {
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#useOsmMap()
+	 */
+	@Override
+	public void useOsmMap() {
 		osmMapTiles = new GoogleTilesOverlay(osmTileProvider,
 				getApplicationContext());
 
 		List<Overlay> list = ((MapView) mapView).getOverlays();
 		list.add(0, osmMapTiles);
 	}
+	
+	public void startAim() {
+		MapMenuItemClickListener mmicl = new MapMenuItemClickListener(this);
+		mmicl.MyMenuItemClick(R.id.crosshairMenuSetAim);
+	}
 
-	public void setupOsmTiles() {
+	public void addMark() {
+		MapMenuItemClickListener mmicl = new MapMenuItemClickListener(this);
+		mmicl.MyMenuItemClick(R.id.crosshairMenuSetMark);
+	}
+	
+	public void addRoute() {
+		MapMenuItemClickListener mmicl = new MapMenuItemClickListener(this);
+		mmicl.MyMenuItemClick(R.id.crosshairMenuSetRoute);
+	}
+	
+	public void calcDistance() {
+		MapMenuItemClickListener mmicl = new MapMenuItemClickListener(this);
+		mmicl.MyMenuItemClick(R.id.crosshairMenuDistance);
+	}
+	
+	public void centerMap () {
+		GeoInformationController geoInformationController = new GeoInformationController(
+				this);
+		GeoInformation geoinfo = geoInformationController.getLast();
+
+		GeoPoint geo = new GeoPoint(geoinfo.getLatitude(),
+				geoinfo.getLongitude());
+
+		mapController.setCenter(geo);
+	}
+	
+	public void discardTarget() {
+		
+		if(this.aim != null) {
+			List<Overlay> list = mapView.getOverlays();
+			list.remove(aim);
+		}
+	}
+	
+	private void setupOsmTiles() {
 		osmTileProvider = new MapTileProviderBasic(this.getApplicationContext());
 		osmTileProvider.setTileSource(TileSourceFactory.MAPNIK);
 	}
 
-	public void setupMap() {
+	private void setupMap() {
 
 		MapTileProviderBasic seamarkTileProvider = new MapTileProviderBasic(
 				this.getApplicationContext());
@@ -236,9 +216,8 @@ public class MapViewActivity extends MapActivity implements IMapActivity{
 
 		mapView.setOnTouchListener(new MapTouchListener(gestureDetector));
 
-		editPositionText(geoinfo);
 	}
-
+	
 	private void setUpLocationListening() {
 		LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 		GeoInfoListener geoInfo = new GeoInfoListener(this);
@@ -261,75 +240,129 @@ public class MapViewActivity extends MapActivity implements IMapActivity{
 		// unused
 		return false;
 	}
-
-	private void initActionBar() {
-		actionBar.setHomeButtonEnabled(true);
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    
+	    actionBar.setHomeButtonEnabled(true);
 		actionBar.setDisplayShowTitleEnabled(true);
 		actionBar.setTitle("Map");
 		actionBar.setLogo(R.drawable.actionlogo);
-		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-		actionBar.setDisplayShowCustomEnabled(true);
-		actionBar.setCustomView(R.layout.maphead);
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+		
+		actionBar.setListNavigationCallbacks(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.mainMenu)), 
+				new MainMenuOnNavigationListener(this));
+		actionBar.setSelectedNavigationItem(0);
+	    
+		return false;
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#getMapView()
+	 */
+	@Override
 	public MapView getMapView() {
 		return this.mapView;
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#showContextMenu(com.google.android.maps.Overlay)
+	 */
+	@Override
 	public void showContextMenu(Overlay gp) {
 		mapMenuOverlay = gp;
 		mapMenu.toggleMenu();
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#showMarkMenu(com.google.android.maps.Overlay)
+	 */
+	@Override
 	public void showMarkMenu(Overlay gp) {
 		mapMenuOverlay = gp;
 		markMenu.toggleMenu();
 	}
 
-	public void createMapMenu() {
+	private void createMapMenu() {
 		mapMenu = (MyMenuView) findViewById(R.id.mapMyMenu);
 		mapMenu.setMenuClickCallback(new MapMenuItemClickListener(this));
 		mapMenu.setMenuItems(R.menu.crosshaircontextmenu);
 	}
 
-	public void createMarkMenu() {
+	private void createMarkMenu() {
 		markMenu = (MyMenuView) findViewById(R.id.markMyMenu);
 		markMenu.setMenuClickCallback(new MarkMenuItemClickListener(this));
 		markMenu.setMenuItems(R.menu.markmenu);
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#getDistanceOverlayList()
+	 */
+	@Override
 	public DistanceOverlayList getDistanceOverlayList() {
 		return this.distOverlayList;
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#getRouteOverlayList()
+	 */
+	@Override
 	public RouteOverlayList getRouteOverlayList() {
 		return this.routeOverlayList;
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#getAim()
+	 */
+	@Override
 	public AimOverlay getAim() {
 		return aim;
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#setAim(en.htwg.seapal.gui.overlay.AimOverlay)
+	 */
+	@Override
 	public void setAim(AimOverlay aim) {
 		this.aim = aim;
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#getLocationOverlay()
+	 */
+	@Override
 	public MyGoogleLocationOverlay getLocationOverlay() {
 		return this.locationOverlay;
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#setLocationOverlay(en.htwg.seapal.gui.overlay.MyGoogleLocationOverlay)
+	 */
+	@Override
 	public void setLocationOverlay(MyGoogleLocationOverlay locationOverlay) {
 		this.locationOverlay = locationOverlay;
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#getMapMenuOverlay()
+	 */
+	@Override
 	public Overlay getMapMenuOverlay() {
 		return mapMenuOverlay;
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#setMapMenuOverlay(com.google.android.maps.Overlay)
+	 */
+	@Override
 	public void setMapMenuOverlay(Overlay mapMenuOverlay) {
 		this.mapMenuOverlay = mapMenuOverlay;
 	}
 
+	/* (non-Javadoc)
+	 * @see en.htwg.seapal.gui.activity.IMapViewActivity#getDoubleTapDragListener()
+	 */
+	@Override
 	public IMapGestureListener getDoubleTapDragListener() {
 		return doubleTapDragListener;
 	}

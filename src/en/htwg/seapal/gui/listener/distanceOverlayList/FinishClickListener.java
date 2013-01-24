@@ -1,15 +1,15 @@
 package en.htwg.seapal.gui.listener.distanceOverlayList;
 
-import en.htwg.seapal.gui.activity.MapViewActivity;
+import en.htwg.seapal.gui.activity.IMapViewActivity;
 import en.htwg.seapal.gui.overlay.DistanceOverlayList;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 public class FinishClickListener implements OnClickListener {
 
-	private MapViewActivity activity = null;
+	private IMapViewActivity activity = null;
 	
-	public FinishClickListener(MapViewActivity activity) {
+	public FinishClickListener(IMapViewActivity activity) {
 		this.activity = activity;
 	}
 	

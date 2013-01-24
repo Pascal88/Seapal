@@ -1,42 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:rowCount="1"
-    android:columnCount="3">
-    
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
     	android:layout_row="0">
-        <ImageButton
-            android:id="@+id/menuButton"
-            android:layout_width="wrap_content"
+        <Spinner
+            android:id="@+id/menuSpinner"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:background="@null"
-            android:scaleType="fitXY"
             android:contentDescription="@string/menuButton"
             android:src="@drawable/buttonselector"
-            android:onClick="showMenuPopup" 
             android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
             android:paddingBottom="5dp"/>
-        
-        <TextView 
-            android:id="@+id/menuLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:text="@string/menuButtonText" 
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="20dp"
-            android:textColor="#FFFFFF" />
-    </RelativeLayout>
    
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="1100dp"
-    	android:layout_height="wrap_content"
-    	android:layout_column="1">
         <TextView
             android:id="@+id/positionText"
             android:layout_width="wrap_content"
@@ -47,36 +23,15 @@
             android:layout_centerHorizontal="true"
             android:textColor="#FFFFFF" />
         
-    </RelativeLayout>
-        
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:layout_column="2"
-    	android:layout_gravity="right">
-        
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
+        <Spinner
+            android:id="@+id/toolsSpinner"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:background="@null"
             android:contentDescription="@string/menuButton"
-            android:scaleType="fitXY"
             android:src="@drawable/buttonselector"
-            android:onClick="showToolsPopup"
             android:layout_marginTop="5dp"
-            android:paddingRight="5dp" />
-            
-            <TextView 
-            android:id="@+id/toolsLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:text="@string/toolsButtonText" 
-            android:textAppearance="?android:attr/textAppearanceMedium" 
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="15dp"
-            android:textColor="#FFFFFF" />
+            android:paddingRight="5dp"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true" />
         
     </RelativeLayout>
-
-</GridLayout>

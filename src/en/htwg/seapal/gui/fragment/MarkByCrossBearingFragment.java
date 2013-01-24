@@ -1,4 +1,4 @@
-package en.htwg.seapal.gui.fragment;
+ package en.htwg.seapal.gui.fragment;
 
 import en.htwg.seapal.R;
 import en.htwg.seapal.controller.GeoInformationController;
@@ -50,6 +50,14 @@ public class MarkByCrossBearingFragment extends Fragment implements ITabFragment
 		button2 = (Button) view.findViewById(R.id.marksAtCross2Button);
 		button2.setOnClickListener(new SetPositionClickListener(getActivity(), view2, lat2, lon2));
 		
+		double a = 0;
+		
+		EditText ed1 = (EditText) view.findViewById(R.id.marksBearingCross1Edit);
+		EditText ed2 = (EditText) view.findViewById(R.id.marksBearingCross2Edit);
+		
+		ed1.setText(""+a);
+		ed2.setText(""+a);
+		
 		return view;
 	}
 
@@ -65,13 +73,18 @@ public class MarkByCrossBearingFragment extends Fragment implements ITabFragment
 		double brng2 = Double.parseDouble(ed2.getText().toString());
 		
 		GeoInformationController geoInformationController = new GeoInformationController(activity);
-		return geoInformationController.getPointByTwoPoints(
+		Point p = geoInformationController.getPointByTwoPoints(
 				(int) (Location.convert(lat1.getText().toString().replace(",", ".")) / 0.000001), 
 				(int) (Location.convert(lon1.getText().toString().replace(",", ".")) / 0.000001), 
 				brng1, 
 				(int) (Location.convert(lat2.getText().toString().replace(",", ".")) / 0.000001), 
 				(int) (Location.convert(lon2.getText().toString().replace(",", ".")) / 0.000001), 
 				brng2);
+		
+		if (p == null){
+			return new Point(0,0); 
+		}
+		return p;
 	}
 
 	@Override

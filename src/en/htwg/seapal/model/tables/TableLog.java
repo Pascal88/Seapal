@@ -6,8 +6,10 @@ import java.util.Iterator;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.text.format.Time;
 import en.htwg.seapal.model.ATable;
 import en.htwg.seapal.model.models.Log;
 
@@ -32,6 +34,20 @@ public class TableLog extends ATable {
 	
 	public TableLog(SQLiteDatabase db) {
 		super(db,new Log());
+	}
+	
+	public void addLog(Log log){
+		Time now = new Time();
+		now.setToNow();
+		ContentValues values = new ContentValues();
+		
+		values.put("cog", log.cog);
+		values.put("sog", log.sog);
+		values.put("btm", log.btm);
+		values.put("dtm", log.dtm);
+		values.put("timestamp", now.toMillis(false));
+		
+		this.db.insert(this.Table_Name, null, values);
 	}
 	
 	public List<Tupel<Date, Float>> getCog() {

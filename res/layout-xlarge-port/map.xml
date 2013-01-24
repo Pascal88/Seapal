@@ -18,50 +18,33 @@
                 android:name="en.htwg.seapal.gui.fragment.MenuFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-				android:layout_marginTop="1000dp"                
+				android:layout_marginTop="1050dp"                
                 android:layout_centerHorizontal="true" />
-                
-            <RelativeLayout
-                android:id="@+id/menuDropDown"
+        
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp" />
-            
-            <RelativeLayout
-                android:id="@+id/toolsDropDown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="right" />
-            
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="300dp"
-                android:layout_marginTop="500dp" >
+                android:layout_marginLeft="500dp"
+                android:layout_marginTop="300dp" >
                 
             <en.htwg.seapal.gui.MyMenuView
                 	android:id="@+id/mapMyMenu"
                 	android:layout_width="match_parent"
                 	android:layout_height="match_parent" />
-        </FrameLayout>
-        
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-                
-            <en.htwg.seapal.gui.RibbonMenuView
+            
+            <en.htwg.seapal.gui.MyMenuView
                 	android:id="@+id/markMyMenu"
                 	android:layout_width="match_parent"
                 	android:layout_height="match_parent" />
         </FrameLayout>
         
-            <RelativeLayout
+        <RelativeLayout
                 android:id="@+id/mapViewDragable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            
-            <RelativeLayout
+        <RelativeLayout
                 android:id="@+id/mapViewDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+        
     </RelativeLayout>

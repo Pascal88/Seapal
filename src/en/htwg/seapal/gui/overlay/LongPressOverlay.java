@@ -41,6 +41,7 @@ public class LongPressOverlay extends Overlay implements IOverlay{
 		drag = BitmapFactory.decodeResource(activity.getResources(),
 				R.drawable.haircross_active);
 		bmp = normal;
+		activity.setMapMenuOverlay(this);
 	}
 
 	@Override
