@@ -9,7 +9,7 @@
     	android:layout_height="wrap_content"
     	android:src="@drawable/overlaybackground"
     	android:layout_centerHorizontal="true"
-    	android:layout_marginTop="10dp"
+    	android:layout_marginTop="100dp"
     	android:contentDescription="@string/accept"/>
     
     <TextView 
@@ -18,7 +18,7 @@
     	android:layout_height="wrap_content"
     	android:layout_centerHorizontal="true"
     	android:text="@string/minute"
-    	android:layout_marginTop="20dp"
+    	android:layout_marginTop="110dp"
     	style="@style/blackLetters"
     	android:textAppearance="?android:attr/textAppearanceLarge"/>
         <ImageView

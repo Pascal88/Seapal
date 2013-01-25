@@ -12,6 +12,28 @@
             android:clickable="true"
             android:enabled="true" >
         </com.google.android.maps.MapView>
+        
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            
+            <ImageView 
+                android:layout_width="400dp"
+                android:layout_height="70dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/overlaybackground"/>
+            
+            <TextView 
+                android:id="@+id/mappositiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                style="@style/blackLetters"/>
+            
+        </RelativeLayout>
 
                 <fragment
                 android:id="@+id/menu"

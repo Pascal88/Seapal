@@ -69,12 +69,14 @@ public class MapViewActivity extends MapActivity implements IMapActivity, IMapVi
 	private IMapGestureListener doubleTapDragListener = null;
 	private DistanceOverlayList distOverlayList = null;
 	private RouteOverlayList routeOverlayList = null;
+	private TextView positionText = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setupOsmTiles(); // needs to be called before setContentView
 		setContentView(R.layout.map);
+		positionText = (TextView) findViewById(R.id.mappositiontext);
 		actionBar = getActionBar();
 
 		// Creating and initializing Map
@@ -100,7 +102,7 @@ public class MapViewActivity extends MapActivity implements IMapActivity, IMapVi
 	@Override
 	public void editPositionText(GeoInformation geoInformation) {
 
-		/*float knots = (float) (geoInformation.getSpeed() / 0.514444);// get cur
+		float knots = (float) (geoInformation.getSpeed() / 0.514444);// get cur
 																		// Speed
 																		// m/s
 																		// make
@@ -120,7 +122,7 @@ public class MapViewActivity extends MapActivity implements IMapActivity, IMapVi
 						Location.FORMAT_SECONDS)
 				+ " Lon "
 				+ Location.convert(geoInformation.getLongitude() * 0.000001,
-						Location.FORMAT_SECONDS));*/
+						Location.FORMAT_SECONDS));
 	}
 
 	/* (non-Javadoc)
@@ -215,6 +217,8 @@ public class MapViewActivity extends MapActivity implements IMapActivity, IMapVi
 		mapController.setCenter(geo);
 
 		mapView.setOnTouchListener(new MapTouchListener(gestureDetector));
+		
+		editPositionText(geoinfo);
 
 	}
 	
