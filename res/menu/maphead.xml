@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/mapHeadMainMenu" android:title="@string/mainMenuTitle" android:actionLayout="@layout/mapheadmain" android:showAsAction="ifRoom|withText" android:menuCategory="container"></item>
+    <item android:id="@+id/mapHeadText" android:showAsAction="always" android:actionLayout="@layout/mapheadtext"></item>
+    <item android:id="@+id/mapHeadToolsMenu" android:title="@string/toolsmenu" android:actionLayout="@layout/mapheadtools" android:showAsAction="ifRoom|withText"></item>
+    
+
+</menu>
